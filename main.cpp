@@ -31,12 +31,17 @@ void setcursor(bool visible, DWORD size)
 
 int main()
 {   
-
-    for(int i=10;i<100;i=i+10)
+    for(int i=1; i<256;i=i+10)
+    {
+      set_color_text(i);
+      cout << "Hey You....."<<endl;
+    }
+    for(int i=20;i<100;i=i+15)
     {
         gotoxy(i,10);
         cout << "Hello";
         Sleep(1000);
     }
+    getch();
     return 0;
 }
