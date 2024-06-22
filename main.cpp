@@ -31,9 +31,11 @@ void setcursor(bool visible, DWORD size)
 
 int main()
 {   
-    for(int i=0;i<256;i++)
+    
+    for(int i=0; i<15;i++)
     {
-        cout<<i<<" "<<(char)i<<endl;
+        set_color_text(i);
+        cout<<(char)3;
     }
     Sleep(500);
     getch();
