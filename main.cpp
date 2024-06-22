@@ -71,6 +71,31 @@ void play()
 
         Sleep(30);
 
+        player_bottom.erase();
+        player_top.erase();
+        
+        if(kbhit())
+        {
+            switch (getch())
+            {
+            case 'a':
+            case 'A':
+                player_top.move(-1);
+                break;
+            case 'd':
+            case 'D':
+                player_top.move(1);
+                break; 
+            case 75:
+                player_bottom.move(-1);
+                break;
+            case 77:
+                player_bottom.move(1);
+                break;    
+            default:
+                break;
+            }
+        }
         ball.erase();
         ball.move();
         ball.collision();

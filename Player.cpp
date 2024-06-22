@@ -23,11 +23,21 @@ void Player::draw()
 }
 void Player::erase()
 {
-
+    int x =center.get_x();
+    int y =center.get_y(); 
+    for(int i=x-block_size;i<=x+block_size;i++)
+    {
+        set_color_text(color);
+        gotoxy(i,y);
+        cout<<" ";
+    }
 }
 void Player::move(int direction)
 {
-
+    if(direction==-1)
+     center.move_left();
+    else if(direction==1)
+      center.move_right();
 }
 void Player::set_name(string name)
 {
