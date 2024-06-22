@@ -34,10 +34,10 @@ void Player::erase()
 }
 void Player::move(int direction)
 {
-    if(direction==-1)
-     center.move_left();
-    else if(direction==1)
-      center.move_right();
+    if(direction== 1 && (center.get_x()< margin+width-1-block_size ))
+     center.move_right();
+    else if(direction==-1 && (center.get_x()> margin+block_size))
+      center.move_left();
 }
 void Player::set_name(string name)
 {
