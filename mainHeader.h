@@ -29,24 +29,6 @@ class Point{
         int get_x();
         int get_y();
 };
-class Ball{
-
-private:
-        Point ball;
-        int color;
-        int dir_x,dir_y;
-public:
-        void draw();
-        void erase();
-        void move();
-
-        void collision();
-
-        Ball();
-
-        int get_x();
-        int get_y();
-};
 
 class Player{
     private:
@@ -69,3 +51,23 @@ class Player{
         void erase();
         void move(int direction); // 1: right  , -1: left
 };
+
+class Ball{
+
+private:
+        Point ball;
+        int color;
+        int dir_x,dir_y;
+public:
+        void draw();
+        void erase();
+        void move();
+
+        void collision(Player, Player);
+
+        Ball();
+
+        int get_x();
+        int get_y();
+};
+

@@ -98,7 +98,7 @@ void play()
         }
         ball.erase();
         ball.move();
-        ball.collision();
+        ball.collision(player_top,player_bottom);
 
     }
     
